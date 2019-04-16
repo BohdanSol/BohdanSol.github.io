@@ -1,0 +1,23 @@
+#main {
+	width: 85%;
+	margin: 0 auto;
+}
+p {
+	font-family: Arial;
+	font-size: 18px;
+	margin: -1px -1px;
+	text-align: center;
+	padding: 20px 0;
+	width: calc(100% / 9);
+	float: left;
+	border: 1px solid #000;
+}
+.green {
+	background-color: green;
+}
+.yellow {
+	background-color: yellow;
+}
+.blue {
+	background-color: skyblue;
+}
