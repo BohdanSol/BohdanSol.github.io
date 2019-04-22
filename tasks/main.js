@@ -5,12 +5,8 @@ function generateFibbonacciSequence(n) {
 		return 1;
 	} else {
 		var fibo = [ 1, 1 ];
-		var l = 0,
-			k = 1;
-		while (fibo.length <= n) {
-			fibo.push(fibo[l] + fibo[k]);
-			l = l + 1;
-			k = k + 1;
+		for (i = 2; i < n; i++) {
+			fibo[i] = fibo[i - 1] + fibo[i - 2];
 		}
 	}
 	return fibo;
