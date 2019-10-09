@@ -1,0 +1,283 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+a {
+	text-decoration: none;
+	color: #fff;
+	font-size: 16px;
+	font-family: 'Montserrat', sans-serif;
+}
+header {
+	display: flex;
+	flex-direction: row;
+	position: absolute;
+	top: 0;
+	width: 100vw;
+	height: 80px;
+	background-color: #323639;
+	z-index: 999;
+	align-items: center;
+}
+.logo,
+.donate {
+	flex: 1;
+	padding: 0 50px;
+}
+.logo a img {
+	height: 45px;
+}
+.nothing {
+	flex: 2;
+}
+.nothing a {
+	margin-left: 20px;
+}
+.btn {
+	width: 390px;
+	height: 50px;
+	background-image: linear-gradient(90deg, #4f97d1 0%, #b6539f 20%, #f49442 49%, #90c13e 80%, #4f97d1 100%);
+	border-radius: 25px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 16px;
+	font-family: 'Montserrat', sans-serif;
+	font-weight: bold;
+}
+.btn:hover {
+	animation: slidebg 2s linear infinite;
+}
+
+@keyframes slidebg {
+	to {
+		background-position: 390px;
+	}
+}
+.s1,
+.s2,
+.s3,
+.s4,
+.s5 {
+	width: 1170px;
+	margin: 0 auto;
+}
+h1 {
+	font-family: 'Montserrat', sans-serif;
+	font-weight: bold;
+	font-size: 48px;
+	padding-bottom: 30px;
+	color: #f2f2f2;
+}
+section p {
+	width: 40vw;
+	font-family: 'Montserrat', serif;
+	font-weight: 100;
+	font-size: 14px;
+	line-height: 22px;
+	color: #f2f2f2;
+}
+.donate-btn {
+	font-family: 'Montserrat', sans-serif;
+	font-size: 16px;
+	font-weight: bold;
+	margin-top: 30px;
+	padding: 15px 30px;
+	border: 0;
+	background-color: #fff;
+	border-radius: 30px;
+	cursor: pointer;
+	text-decoration: none;
+	outline-width: 0px;
+	outline: none;
+	color:#555;
+	transition-duration: .5s;
+}
+.look-btn {
+	color: #fff;
+	margin-left: 20px;
+	font-family: 'Montserrat', sans-serif;
+	font-size: 16px;
+	font-weight: 300;
+	margin-top: 30px;
+	background: transparent;
+	padding: 13px 28px;
+	border-radius: 30px;
+	border: 2px solid #f2f2f2;
+	cursor: pointer;
+	text-decoration: none;
+	outline-width: 0px;
+	outline: none;
+	transition-duration: .5s;
+}
+.donate-btn:hover{
+	color:#000;
+	transition-duration: .5s;
+}
+.look-btn:hover{
+	padding: 10px 25px;
+	border: 5px solid #f2f2f2;
+	transition-duration: .5s;
+}
+
+/* Images and floating animation */
+
+@-webkit-keyframes float {
+  0% {
+    -webkit-transform: translatey(0px);
+            transform: translatey(0px);
+  }
+  50% {
+    -webkit-transform: translatey(-20px);
+            transform: translatey(-20px);
+  }
+  100% {
+    -webkit-transform: translatey(0px);
+            transform: translatey(0px);
+  }
+}
+
+@keyframes float {
+  0% {
+    -webkit-transform: translatey(0px);
+            transform: translatey(0px);
+  }
+  50% {
+    -webkit-transform: translatey(-20px);
+            transform: translatey(-20px);
+  }
+  100% {
+    -webkit-transform: translatey(0px);
+            transform: translatey(0px);
+  }
+}
+
+.s1 img,
+.s2 img,
+.s3 img,
+.s4 img,
+.s5 img{
+	z-index: 5;
+	position: absolute;
+	width:30vw;
+	right:10vw;
+	top:calc(50vh - 25vh);
+  -webkit-transform: translatey(0px);
+          transform: translatey(0px);
+  -webkit-animation: float 6s ease-in-out infinite;
+          animation: float 6s ease-in-out infinite;
+
+}
+
+
+/* Media Queries */
+
+@media screen and (max-width: 992px) {
+  	.s1 img,
+	.s2 img,
+	.s3 img,
+	.s4 img,
+	.s5 img {
+		display: none;
+	}
+	.s1,
+	.s2,
+	.s3,
+	.s4,
+	.s5 {
+		width: 100%;
+		margin: 0 auto;
+	}
+	section p {
+		width: 80vw;
+		font-size: 12px;
+		line-height: 18px;
+		color: #f2f2f2;
+		padding-left: 30px;
+	}
+	h1 {
+		font-family: 'Montserrat', sans-serif;
+		font-weight: bold;
+		font-size: 30px;
+		padding-bottom: 30px;
+		padding-left: 30px;
+		color: #f2f2f2;
+	}
+	.donate-btn {
+		margin-left: 30px;
+	}
+	.logo a img{
+		height: 25px;
+	}
+	.donate {
+		flex: 2;
+		padding: 0 10px;
+	}
+	.btn {
+		width: 270px;
+		height: 50px;
+		font-size: 12px;
+	}
+	.btn{
+		float: right;
+	}
+	.nothing a {
+		font-size: 12px;
+	}
+}
+
+/* On screens that are 600px or less */
+@media screen and (max-width: 600px) {
+	.s1 img,
+	.s2 img,
+	.s3 img,
+	.s4 img,
+	.s5 img {
+		display: none;
+	}
+	.s1,
+	.s2,
+	.s3,
+	.s4,
+	.s5 {
+		width: 100%;
+		margin: 0 auto;
+	}
+	section p {
+
+		z-index: 999;
+		width: 90vw;
+		font-family: 'Montserrat', serif;
+		font-weight: 100;
+		font-size: 14px;
+		line-height: 22px;
+		color: #f2f2f2;
+	}
+	h1 {
+		font-family: 'Montserrat', sans-serif;
+		font-weight: bold;
+		font-size: 30px;
+		padding-bottom: 30px;
+		padding-left: 30px;
+		color: #f2f2f2;
+	}
+	.donate-btn {
+		margin-left: 30px;
+	}
+	.logo{
+		display:none;
+	}
+	.donate {
+		flex: 1;
+		padding: 0 10px;
+	}
+	.btn {
+		width: 290px;
+		height: 50px;
+		font-size: 12px;
+	}
+	.nothing a {
+		font-size: 12px;
+	}
+}
