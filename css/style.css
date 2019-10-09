@@ -191,7 +191,6 @@ section p {
 		width: 80vw;
 		font-size: 12px;
 		line-height: 16px;
-		color: #f2f2f2;
 		padding-left: 30px;
 	}
 	h1 {
@@ -201,7 +200,6 @@ section p {
 		margin-top: 40px;
 		padding-bottom: 30px;
 		padding-left: 30px;
-		color: #f2f2f2;
 	}
 	.donate-btn {
 		margin-left: 30px;
@@ -250,7 +248,6 @@ section p {
 		font-weight: 100;
 		font-size: 12px;
 		line-height: 16px;
-		color: #f2f2f2;
 	}
 	h1 {
 		font-family: 'Montserrat', sans-serif;
@@ -259,7 +256,6 @@ section p {
 		margin-top: 50px;
 		padding-bottom: 30px;
 		padding-left: 30px;
-		color: #f2f2f2;
 	}
 	.donate-btn {
 		margin-left: 30px;
