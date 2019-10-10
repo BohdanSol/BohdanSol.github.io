@@ -25,6 +25,9 @@ header {
 	flex: 1;
 	padding: 0 50px;
 }
+.donate a {
+	margin-left: auto;
+}
 .logo a img {
 	height: 25px;
 }
@@ -69,6 +72,45 @@ h1 {
 	font-size: 48px;
 	padding-bottom: 30px;
 	color: #f2f2f2;
+}
+.s6 {
+	padding-top: 80px;
+	width: 800px;
+	margin: 0 auto;
+}
+.row {
+	margin-bottom: 10px;
+}
+.row img {
+	height: 20px;
+	float: left;
+	margin-right: 20px;
+	opacity: .2;
+	margin-top: 7px;
+}
+h2 {
+	font-family: 'Montserrat', sans-serif;
+	color: #323639;
+	font-size: 24px;
+}
+h3 {
+	font-family: 'Montserrat', sans-serif;
+	color: #323639;
+	font-size: 18px;
+}
+.row-payment {
+	margin-top: 40px;
+}
+.row-payment img {
+	margin-top: 20px;
+	height: 60px;
+}
+.row-payment img:last-child {
+	height: 40px;
+	margin-bottom: auto;
+}
+.copy-right {
+	margin-top: 10vh;
 }
 section p {
 	width: 40vw;
