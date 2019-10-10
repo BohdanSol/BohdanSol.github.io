@@ -163,6 +163,14 @@ section p {
 	transition-duration: .5s;
 }
 
+/* Contact page styles */
+
+.content {
+	padding-top: 40vh;
+	width: 800px;
+	margin: 0 auto;
+}
+
 /* Images and floating animation */
 
 @-webkit-keyframes float {
