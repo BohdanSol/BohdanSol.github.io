@@ -277,6 +277,9 @@ section p {
 	}
 }
 @media screen and (max-width: 370px) {
+	header {
+		height: 60px;
+	}
 	.s1 img,
 	.s2 img,
 	.s3 img,
@@ -293,6 +296,7 @@ section p {
 		margin: 0 auto;
 	}
 	section p {
+		padding-left: 20px;
 		z-index: 999;
 		width: 80vw;
 		font-size: 11px;
@@ -316,8 +320,9 @@ section p {
 	}
 	.btn {
 		width: 230px;
-		height: 50px;
+		height: 40px;
 		font-size: 11px;
+		border-radius: 20px;
 	}
 	.nothing a {
 		font-size: 10px;
