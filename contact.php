@@ -8,21 +8,13 @@
     <link rel="icon" href="./img/favicon.ico" type="image/x-icon"/>
     <link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon"/>
     <link href="https://fonts.googleapis.com/css?family=Roboto|Montserrat&display=swap" rel="stylesheet">
+    <script type='text/javascript' src="./js/menu.js" defer></script>
     <title>Знати PRO Карпати</title>
 </head>
 <body>
-    <header>
-        <section class="logo">
-            <a href="./index.html"><img src="./img/logo.svg" alt="ZnatyPROKarpaty"></a>
-        </section>
-        <section class='nothing'>
-            <a href="./about.html">Про нас</a>
-            <a href="./contact.html">Контакти</a>
-        </section>
-        <section class="donate">
-            <a href="#" class="btn">Купити на перед</a>                
-        </section>
-    </header>
+    <?php
+        include_once('header.php');
+    ?>
     <div class="content">
             <div class="row">
                     <img src="./img/phone.svg" alt="">

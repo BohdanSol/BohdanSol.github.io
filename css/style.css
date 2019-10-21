@@ -15,6 +15,7 @@ header {
 	position: absolute;
 	top: 0;
 	width: 100vw;
+	max-width: 100%;
 	height: 80px;
 	background-color: #323639;
 	z-index: 999;
@@ -36,6 +37,14 @@ header {
 }
 .nothing a {
 	margin-left: 20px;
+}
+#menu {
+	cursor: pointer;
+	display: none;
+	padding: 10px;
+}
+#menu img {
+	height: 18px;
 }
 .btn {
 	width: 200px;
@@ -171,6 +180,82 @@ section p {
 	margin: 0 auto;
 }
 
+/* FAQ page styles */
+.faq {
+	padding-top: 40px;
+	width: 800px;
+	margin: 0 auto;
+}
+.faq-nav {
+	margin-top: 30px;
+}
+.faq-nav a {
+	display: block;
+	padding: 4px 6px;
+	color: #323639;
+}
+.faq-nav a:hover {
+	background-color: #f5f5f5;
+}
+.faq div {
+	margin-top: 20px;
+}
+.faq p {
+	padding-top: 10px;
+	font-family: sans-serif;
+}
+
+/* Order page */
+
+.order {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.order form input {
+	display: block;
+	width: 350px;
+	margin-top: 20px;
+	height: 40px;
+	padding-left: 20px;
+	border: 1px solid #ccc;
+	border-radius: 20px;
+	outline: none;
+	background-color: #f5f5f5;
+}
+.order form button {
+	justify-self: center;
+	margin-top: 20px;
+	outline: none;
+	width: 300px;
+	height: 50px;
+	border: none;
+	color: #fff;
+	margin-left: 25px;
+	font-weight: bold;
+	border-radius: 25px;
+	background-color: #90c13e;
+	cursor: pointer;
+	transition-duration: .5s;
+	-webkit-transition-duration: .5s;
+}
+.order form button:hover {
+	background-color: #87b53a;
+}
+.order form p {
+	margin-top: 20px;
+}
+.order form a,
+.order form p {
+	font-family: 'Montserrat', sans-serif;
+	font-size: 12px;
+	color: #333;
+}
+.order form a {
+	color: #4f97d1;
+	font-weight: bold;
+}
+
 /* Images and floating animation */
 
 @-webkit-keyframes float {
@@ -269,9 +354,6 @@ section p {
 	.btn {
 		float: right;
 	}
-	.nothing a {
-		font-size: 12px;
-	}
 }
 
 /* On screens that are 600px or less */
@@ -324,6 +406,27 @@ section p {
 	}
 	.nothing a {
 		font-size: 12px;
+		display: none;
+	}
+	#menu {
+		padding-left: 30px;
+		display: block;
+	}
+	.nav-item:first-of-type {
+		margin-top: 20px;
+	}
+	.nav-item {
+		position: absolute;
+		height: 40px;
+		padding-top: 13px;
+		padding-left: 30px;
+		margin-left: 0px;
+		margin-top: 60px;
+		width: 80%;
+		background-color: #323639;
+	}
+	.nav-item:last-of-type {
+		margin-top: 100px;
 	}
 }
 @media screen and (max-width: 370px) {

@@ -10,28 +10,20 @@
     <link rel="icon" href="./img/favicon.ico" type="image/x-icon"/>
     <link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon"/>
     <link href="https://fonts.googleapis.com/css?family=Roboto|Montserrat&display=swap" rel="stylesheet">
+    <script type='text/javascript' src="./js/menu.js" defer></script>
     <title>Знати PRO Карпати</title>
 </head>
 
 <body>
-    <header>
-        <section class="logo">
-            <a href="./index.html"><img src="./img/logo.svg" alt="ZnatyPROKarpaty"></a>
-        </section>
-        <section class='nothing'>
-            <a href="./about.html">Про нас</a>
-            <a href="./contact.html">Контакти</a>
-        </section>
-        <section class="donate">
-            <a href="#" class="btn">Купити на перед</a>
-        </section>
-    </header>
+    <?php
+        include_once('header.php');
+    ?>
     <div id="fullpage">
         <section class="section">
             <div class="s1">
                 <h1>Економіка спадщини: <br>посібник для малих громад</h1>
                 <p>Говорячи про спадщину, люди зазвичай подумки спрямовуються у  минуле. Старовинні споруди, артефакти, перекази й легенди традиційно занурюють нас у історію, а дивлячись на споконвічні дерева та озера, ми взагалі втрачаємо відчуття часу та віддаляємось від буденного. Культурна й природна спадщина – а така категорія означає всю сукупність успадкованих нами нерукотворних та створених попередниками цінностей – у традиційній уяві важко стикується з економічними категоріями та господарськими процесами.</p>
-                <a href="">
+                <a href="./order.php">
                     <button class='donate-btn'>
                         Придбати
                     </button>
