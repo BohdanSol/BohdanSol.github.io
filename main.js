@@ -28,6 +28,7 @@ stepOneBtn.onclick = () => {
 
 stepTwoBtn.onclick = () => {
 	readInputValues(rows, cols);
+	checkBalance(rows, cols);
 	solveProblem(rows, cols);
 	showSolution(rows, cols);
 };
@@ -103,10 +104,92 @@ readInputValues = (r, c) => {
 	for (var j = 0; j < c - 1; j++) {
 		needs[j] = startingMatrix[0][j + 1];
 	}
-	for (var i = 0; i < r; i++) {}
-	solutionMatrix = startingMatrix;
 	//console.log(stocks);
 	//console.log(shipments);
+};
+
+checkBalance = (r, c) => {
+	let sumR = 0,
+		sumC = 0;
+	for (var i = 1; i < r; i++) {
+		sumR += startingMatrix[i][0];
+	}
+	for (var j = 1; j < c; j++) {
+		sumC += startingMatrix[0][j];
+	}
+	if (sumR != sumC) {
+		if (sumR > sumC) {
+			solutionMatrix = new Array(r);
+			for (var i = 0; i < solutionMatrix.length; i++) {
+				solutionMatrix[i] = new Array(c + 1);
+			}
+			for (var i = 0; i < r; i++) {
+				for (var j = 0; j < c; j++) {
+					solutionMatrix[i][j + 1] = 0;
+				}
+			}
+			for (var i = 0; i < r; i++) {
+				for (var j = 0; j < c; j++) {
+					solutionMatrix[i][j] = startingMatrix[i][j];
+				}
+			}
+			solutionMatrix[0][c] = sumR - sumC;
+			needs[c - 1] = solutionMatrix[0][c];
+			let oldPriceMatrix = priceMatrix;
+			priceMatrix = new Array(r - 1);
+			for (var i = 0; i < priceMatrix.length; i++) {
+				priceMatrix[i] = new Array(c);
+			}
+			for (var i = 0; i < r - 1; i++) {
+				for (var j = 0; j < c; j++) {
+					priceMatrix[i][j] = 0;
+				}
+			}
+			for (var i = 0; i < r - 1; i++) {
+				for (var j = 0; j < c - 1; j++) {
+					priceMatrix[i][j] = oldPriceMatrix[i][j];
+				}
+			}
+			cols++;
+		} else {
+			solutionMatrix = new Array(r + 1);
+			for (var i = 0; i < solutionMatrix.length; i++) {
+				solutionMatrix[i] = new Array(c);
+			}
+			for (var i = 0; i < r; i++) {
+				for (var j = 0; j < c; j++) {
+					solutionMatrix[i + 1][j] = 0;
+				}
+			}
+			for (var i = 0; i < r; i++) {
+				for (var j = 0; j < c; j++) {
+					solutionMatrix[i][j] = startingMatrix[i][j];
+				}
+			}
+			solutionMatrix[r][0] = sumC - sumR;
+			stocks[r - 1] = solutionMatrix[r][0];
+			let oldPriceMatrix = priceMatrix;
+			priceMatrix = new Array(r);
+			for (var i = 0; i < priceMatrix.length; i++) {
+				priceMatrix[i] = new Array(c - 1);
+			}
+			for (var i = 0; i < r; i++) {
+				for (var j = 0; j < c - 1; j++) {
+					priceMatrix[i][j] = 0;
+				}
+			}
+			for (var i = 0; i < r - 1; i++) {
+				for (var j = 0; j < c - 1; j++) {
+					priceMatrix[i][j] = oldPriceMatrix[i][j];
+				}
+			}
+			rows++;
+		}
+	} else {
+		solutionMatrix = startingMatrix;
+	}
+	//console.log(solutionMatrix);
+	//console.log(priceMatrix);
 };
 
 solveProblem = (r, c) => {
@@ -120,7 +203,7 @@ solveProblem = (r, c) => {
 			if (stocks[i] == 0) break;
 		}
 	}
-	// console.log(solutionMatrix);
+	//console.log(solutionMatrix);
 	// Storing shippingMatrix at the array 'solutionMatrix' that already exists
 	// Adding final cost Value
 	L = 0;
