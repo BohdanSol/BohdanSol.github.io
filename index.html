@@ -2,43 +2,109 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Tween Max test</title>
-  <link rel="stylesheet" href="./css/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🍀</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 </head>
 
 <body>
-  <div class="cursor">
-    <div class="cursor__ball cursor-big">
-      <svg height="30" width="30">
-        <circle cx="15" cy="15" r="12" stroke-width="0"></circle>
-      </svg>
-    </div>
+    <main>
+        <header>
+            <h1 id="title">Дебела форма</h1>
+            <p id="description">Обрані варіанти грають роль у фінальному передбаченні (може)</p>
+        </header>
+        <form id="survey-form" action="result.html" method="GET">
+            <div class="form-group">
+                <label for="weather">Який тип погоди вам найбільше імпонує?</label>
+                <div class="radio-group">
+                    <input type="radio" name="weather" id="sunny" value="sunny" required><label for="sunny"> Сонячно </label>
+                </div>
+                <div class="radio-group">
+                    <input type="radio" name="weather" id="rainy" value="rainy" required><label for="rainy"> Дощ </label>
+                </div>
+                <div class="radio-group">
+                    <input type="radio" name="weather" id="snowy" value="snowy" required><label for="snowy"> Сніжно </label>
+                </div>
+                <div class="radio-group">
+                    <input type="radio" name="weather" id="cloudy" value="cloudy" required><label for="cloudy"> Хмарно </label>
+                </div>
+            </div>
 
-    <div class="cursor__ball cursor-small">
-      <svg height="10" width="10">
-        <circle cx="5" cy="5" r="4" stroke-width="0"></circle>
-      </svg>
-    </div>
-  </div>
+            <div class="form-group">
+                <label for="movie">Який тип фільмів вам подобається?</label>
+                <div class="radio-group">
+                    <input type="radio" name="movie" id="comedy" value="comedy" required><label for="comedy"> Комедії </label>
+                </div>
+                <div class="radio-group">
+                    <input type="radio" name="movie" id="detective" value="detective" required><label for="detective"> Детективи </label>
+                </div>
+                <div class="radio-group">
+                    <input type="radio" name="movie" id="melodrama" value="melodrama" required><label for="melodrama"> Мелодрами </label>
+                </div>
+                <div class="radio-group">
+                    <input type="radio" name="movie" id="action" value="action" required><label for="action"> Бойовики </label>
+                </div>
+                <div class="radio-group">
+                    <input type="radio" name="movie" id="sci-fi" value="sci-fi" required><label for="sci-fi"> Фантастика </label>
+                </div>
+            </div>
 
-  <div class="left">
-    <h1>Hello</h1>
-    <p>Теза:</p>
-    <a href="" class="hoverable">Just a demo</a>
-  </div>
+            <div class="form-group">
+                <label for="music">Якому жанру музики ви надаєте перевагу?</label>
+                <div class="radio-group">
+                    <input type="radio" name="music" id="pop" value="pop" required><label for="pop"> Поп </label>
+                </div>
+                <div class="radio-group">
+                    <input type="radio" name="music" id="rock" value="rock" required><label for="rock"> Рок </label>
+                </div>
+                <div class="radio-group">
+                    <input type="radio" name="music" id="rap" value="rap" required><label for="rap"> Реп </label>
+                </div>
+                <div class="radio-group">
+                    <input type="radio" name="music" id="classical" value="classical" required><label for="classical"> Класика </label>
+                </div>
+            </div>
 
-  <div class="right">
-    <h1>Hello</h1>
-    <p>Антитеза:</p>
-    <a href="" class="hoverable">To test it out!</a>
-  </div>
-  <script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.3/TweenMax.min.js'></script>
+            <div class="form-group">
+                <label for="time">Який час доби вам подобається найбільше?</label>
+                <div class="radio-group">
+                    <input type="radio" name="time" id="morning" value="morning" required><label for="morning"> Ранок </label>
+                </div>
+                <div class="radio-group">
+                    <input type="radio" name="time" id="afternoon" value="afternoon" required><label for="afternoon"> Обід </label>
+                </div>
+                <div class="radio-group">
+                    <input type="radio" name="time" id="evening" value="evening" required><label for="evening"> Вечір </label>
+                </div>
+                <div class="radio-group">
+                    <input type="radio" name="time" id="night" value="night" required><label for="night"> Ніч </label>
+                </div>
+            </div>
 
+            <div class="form-group">
+                <label for="superpower">Якщо суперсила, то яка?</label>
+                <div class="radio-group">
+                    <input type="radio" name="superpower" id="invisibility" value="invisibility" required><label for="invisibility"> Невидимість </label>
+                </div>
+                <div class="radio-group">
+                    <input type="radio" name="superpower" id="flight" value="flight" required><label for="flight"> Політ </label>
+                </div>
+                <div class="radio-group">
+                    <input type="radio" name="superpower" id="time-travel" value="time-travel" required><label for="time-travel"> Подорожування у часі </label>
+                </div>
+                <div class="radio-group">
+                    <input type="radio" name="superpower" id="telepathy" value="telepathy" required><label for="telepathy"> Телепатія </label>
+                </div>
+            </div>
 
-
-  <script src="./js/main.js"></script>
+            <div class="form-group">
+                <button id="submit" type="submit">Отримати Результати</button>
+            </div>
+        </form>
+    </main>
 </body>
 
 </html>
